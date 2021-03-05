@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="text" name="i1" id="i1" value="" placeholder="输入0-100" />
+		<input type="button" id="" value="submit" onclick="gn(x)" />
+		<div id="d1">
+
+		</div>
+
+
+		<script type="text/javascript">
+			var x = parseInt(Math.random() * 101);
+			var c = 0;
+			console.log(x);
+			d1.innerHTML = "<h1>HelloWorld</h1>";
+
+			function gn(x) {
+				if (i1.value > x) {
+					d1.innerText = "big" + parseInt(c);
+					c++;
+				} else if (i1.value < x) {
+					d1.innerText = "small" + parseInt(c);
+					c++;
+				} else {
+					d1.innerText = "true" + parseInt(c);
+					c++;
+					x = parseInt(Math.random() * 101);
+					console.log(x);
+					c = 0;
+				}
+
+
+
+
+
+			}
+		</script>
+	</body>
+</html>

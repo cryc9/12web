@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="text" id="i1" value="" />
+		<input type="text" id="i2" value="" />
+		<input type="button" value="加" onclick="fb(1)" />
+		<input type="button" value="减" onclick="fb(2)" />
+		<input type="button" value="乘" onclick="fb(3)" />
+		<input type="button" value="除" onclick="fb(4)" />
+		<div id="d1">
+		</div>
+		<script type="text/javascript">
+			function fb(n) {
+
+				if (inNaN(i1.value) || inNaN(i2.value)) {
+					d1.innerText = "error"
+					return;
+				}
+
+				switch (n) {
+					case 1:
+						d1.innerText = parseFloat(i1.value) + parseFloat(i2.value);
+						break;
+					case 2:
+						d1.innerText = parseFloat(i1.value) - parseFloat(i2.value);
+						break;
+					case 3:
+						d1.innerText = parseFloat(i1.value) * parseFloat(i2.value);
+						break;
+					case 4:
+						d1.innerText = parseFloat(i1.value) / parseFloat(i2.value);
+						break;
+				}
+			}
+		</script>
+	</body>
+</html>
