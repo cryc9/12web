@@ -11,6 +11,13 @@
 			function myfn(){
 				console.log("ok");
 			}
+			let count=0;
+			let t = setInterval(function (){
+				console.log(count++);
+				if (count==5){
+					clearInterval(t);
+				}
+			},1000)
 		</script>
 	</body>
 </html>
