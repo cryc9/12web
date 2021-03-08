@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			onload = function (){
+				d1.innerText = "end";
+			}
+		</script>
+	</head>
+	<body>
+		<div id="d1">
+			测试
+		</div>
+        <select id="s1" onchange="changefn()">
+        <option>北</option>
+		<option>上</option>
+		<option>广</option>
+        </select>
+		<div class="mui-input-row">
+			<label>Input</label>
+			<input type="text" placeholder="普通输入框" id="myinput"
+			onblur="blurfn()">
+		</div>
+		
+<script type="text/javascript">
+	function changefn(){
+		alert(s1.value)
+	}
+	function blurfn(){
+		alert(myinput.value)
+	}
+	onresize = function (){
+		console.log("size change");
+	}
+</script>
+	</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				width: 200px;
+				height: 200px;
+				background-color: green;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="" onmouseover="overfn()" onmouseout="outfn()"
+		
+		onmousedown="downfn()" onmouseup="upfn()" onmousemove="movefn()">
+			
+		</div>
+		
+		<script type="text/javascript">
+			function overfn(){
+				console.log("mouse in")
+			}
+			function outfn(){
+				console.log("mouse out")
+			}
+			function downfn(){
+				console.log("mouse down")
+			}
+			function upfn(){
+				console.log("mouse up");
+			}
+			function movefn(){
+				console.log("mouse move");
+			}
+		</script>
+	</body>
+</html>
