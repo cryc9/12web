@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="text" id="i1">
+		<input type="button" value="按钮" id="b1">
+		<div id="d1"></div>
+		<script src="../js/jquery-1.4.2.js"></script>
+		<script type="text/javascript">
+			$("#b1").click(function() {
+				//alert("clicked");
+			})
+			$("d1").text($("#i1").val());
+		</script>
+	</body>
+</html>

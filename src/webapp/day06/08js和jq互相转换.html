@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+
+		<input type="text" id="i1" placeholder="普通输入框">
+		<input type="button" id="b1" value="js转jq">
+		<input type="button" id="b2" value="jq转js">
+		<script src="../js/jquery-1.4.2.js"></script>
+		<script>
+			$("#b1").click(function (){
+				let js = document.getElementById("i1");
+				let jq = $(js)
+				alert(jq.val())
+			})
+			$("#b2").click(function (){
+				let jq = $("#i1");
+				let js = jq[0];
+				alert(js.value);
+			})
+			
+			
+		</script>
+
+	</body>
+</html>
