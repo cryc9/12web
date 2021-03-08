@@ -32,23 +32,39 @@ input{ margin: 5px 5px; }
 	$(function() {
 		/* ---------表单选择器练习--------- */
 		//改变所有:input 元素的背景色为 #F08080" id="b1"
+		$("#b1").click(function () {
+			$(":input").css("background-color", "#F08080")
+		})
 
 		
 
 		//改变:password 元素的背景色为 #9ACD32" id="b2" 
-
+		$("#b2").click(function () {
+			$(":password").css("background-color", "#9ACD32")
+		})
 
 		
 		//弹出 :radio 元素的个数" id="b3"
-
-
+		$("#b3").click(function () {
+			alert($(":radio").length) 
+		})
 		
 		//弹出所有 :checked 元素的value值" id="b4"
-
+		$("#b4").click(function () {
+			$(":checked").each(function () {
+				alert(this.value);
+			})
+			
+		})
 		
 		
 		//弹出所有 :selected 元素的value值" id="b5"
+		$("#b5").click(function () {
+			$(":selected").each(function () {
+				alert(this.value);
+			})
 
+		})
 
 		
 	})
