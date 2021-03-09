@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<select name="">
+			<option value="">请选择</option>
+			<option value="0">江苏</option>
+			<option value="1">苏州</option>
+			<option value="2">丽江</option>
+		</select>
+		<select name="">
+			<option option="">请选择</option>
+		</select>
+
+		<script src="../js/jquery-1.4.2.js"></script>
+
+		<script>
+			let arr = [
+				[1, 2, 3],
+				["a", "b", "c"],
+				["ut", "gt", "lt"]
+			];
+			$("select:first").change(function() {
+				
+				$("select:last").html("<option>请选择</option>");
+				let cities = arr[this.value];
+
+
+				for (let i = 0; i < cities.length; i++) {
+					let name = cities[i];
+					let o = $("<option></option>");
+					o.text(name);
+					$("select:last").append(o);
+				}
+			})
+		</script>
+
+	</body>
+</html>

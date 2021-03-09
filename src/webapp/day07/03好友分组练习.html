@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<ul>
+			<li>同事
+				<ul>
+					<li>a</li>
+					<li>b</li>
+					<li>c</li>
+				</ul>
+			</li>
+			<li>亲戚
+				<ul>
+					<li>d</li>
+					<li>e</li>
+					<li>f</li>
+				</ul>
+			</li>
+			<li>同学
+				<ul>
+					<li>g</li>
+					<li>h</li>
+					<li>i</li>
+				</ul>
+			</li>
+		</ul>
+
+
+		<script src="../js/jquery-1.4.2.js"></script>
+		<script>
+			$("li>ul").hide();
+		$("body>ul>li").click(function (){
+			$(this).children().toggle();
+			$(this).siblings().children().hide();
+		})
+			
+			
+			
+		</script>
+	</body>
+</html>
