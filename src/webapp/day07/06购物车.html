@@ -24,21 +24,18 @@
 		<script>
 			$("input").click(function() {
 				if (this.id == "all") {
-					alert("点击全选");
 					let state = $(this).attr("checked");
-					$("input:not(#all)").attr("checked", state);
+					$("input.not(#all)").attr("checked", state);
 				}
 				let total = 0;
-				let count = 0;
-				$("input:not(#all)").each(function() {
+				if ("input.not(#all)").each(function() {
 					if ($(this).attr("checked")) {
 						total += this.value * 1;
 						count++;
 					}
-				});
-				$("#all").attr("checked",count==4);
+				})
+				$("#all").attr("checked", count == 4);
 				$("p").text("总价" + total + "元");
-
 			})
 		</script>
 	</body>
