@@ -1,67 +1,79 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-"http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-	<head>
-		<title>Œﬁ±ÍÃ‚Œƒµµ</title>
-		<style>
-			body {
-				background-image: url("../zombies/bg1.jpg")
-	
-				}
-				img{
-					position:absolute;
-					width:50px;
-					height: 50px;
-				}
-		</style>
-	</head>
 
-	<body>
-		<h3 id="s_h3">≥…π¶ ˝¡ø:0</h3>
-		<h3 id="f_h3"> ß∞‹ ˝¡ø:0</h3>
-		<script src="../js/jquery-1.4.2.js"></script>
-		<script>
-			let sCount=0;
-			let fCount=0;
-			onresize = function() {
-				  w = $(window).width();
-				  h = $(window).height();
-				$("body").css("background-size", w + "px " + h + "px ");
-			}
-			setInterval(function(){
-				let img=$("<img src='../zombies/zomb0.png'>")
-				let top = parseInt(Math.random()*(h-50));
-				img.css({"left":w+"px","top":top+"px"})
-				$("body").append(img);
-			
-				img.mouseover(function(){
+<head>
+	<title>Êó†Ê†áÈ¢òÊñáÊ°£</title>
+	<style>
+		body {
+			background-image: url("../zombies/bg1.jpg")
+		}
+
+		img {
+			position: absolute;
+			width: 50px;
+			height: 50px;
+		}
+	</style>
+</head>
+
+<body>
+	<h3 id="s_h3">ÊàêÂäüÊï∞Èáè:0</h3>
+	<h3 id="f_h3">Â§±Ë¥•Êï∞Èáè:0</h3>
+	<script src="../js/jquery-1.4.2.js"></script>
+	<script>
+		let sCount = 0;
+		let fCount = 0;
+		onresize = function () {
+			w = $(window).width();
+			h = $(window).height();
+			$("body").css("background-size", w + "px " + h + "px ");
+		}
+		setInterval(function () {
+			let img = $("<img src='../zombies/zomb0.png'>")
+			let top = parseInt(Math.random() * (h - 50));
+			img.css({ "left": w + "px", "top": top + "px" })
+			$("body").append(img);
+
+			img.mouseover(function () {
+				let hp = img.attr("hp");
+				hp--;
+				img.attr("hp", hp);
+				if (hp <= 0) {
 					img.remove();
 					sCount++;
-					$("#s_h3").text("≥…π¶ ˝¡ø"+sCount);
-				})
-			},100)
-			
-			
-			setInterval(function(){
-				$("img").each(function(){
-					let left = parseInt($(this).css("left"));
-					left-=2;
-					$(this).css("left",left+"px");
-					if (left<=50) {
-						$(this).remove();
-						fCount++;
-						$("#f_h3").text(" ß∞‹ ˝¡ø"+fCount);
-						if(f_count>=10){
-							setTimeout(function (){
-								alert("end");
-								location.reload();
-							},50)
-							
-						}
+					$("#s_h3").text("ÊàêÂäüÊï∞Èáè" + sCount);
+				}
+			})
+		}, 100)
+
+
+		setInterval(function () {
+
+			let type = parseInt(sCount / 20)
+			type = type > 3 ? 3 : type;
+			let hp = type + 1;
+			img.attr("hp", hp);
+			let img = $("<img src='../zombies/zomb" + type + ".png' >")
+			$("img").each(function () {
+				let left = parseInt($(this).css("left"));
+				left -= 2;
+				$(this).css("left", left + "px");
+				if (left <= 50) {
+					$(this).remove();
+					fCount++;
+					$("#f_h3").text("Â§±Ë¥•Êï∞Èáè" + fCount);
+					if (f_count >= 10) {
+						setTimeout(function () {
+							alert("end");
+							location.reload();
+						}, 50)
+
 					}
-				})
-			},10)
-			
-		</script>
-	</body>
+				}
+			})
+		}, 10)
+
+	</script>
+</body>
+
 </html>

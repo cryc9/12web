@@ -24,11 +24,8 @@
 				["ut", "gt", "lt"]
 			];
 			$("select:first").change(function() {
-				
 				$("select:last").html("<option>请选择</option>");
 				let cities = arr[this.value];
-
-
 				for (let i = 0; i < cities.length; i++) {
 					let name = cities[i];
 					let o = $("<option></option>");

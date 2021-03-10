@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Bootstrap Template</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="stylesheet" type="text/css" href="../bootstrap3/css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="../bootstrap3/font-awesome-4.7.0/css/font-awesome.css"/>
+  <style>
+    body{
+      background-color: #2e2e2e;
+    }
+    /*导航条样式*/
+    .navbar{
+      background-color: black;
+      border: 0;
+      margin-top: 10px;
+    }
+    .navbar-brand>img{
+      margin-top: -12px;
+    }
+    /*搜索框样式*/
+    form>input{
+      background-color: #383838;
+      color: #a9a8a8;
+      height: 30px;
+      border-radius: 30px;/*为了实现半圆效果*/
+      border: 0;
+      padding: 10px 20px;
+      margin-top: 10px;
+      outline: none;/*去掉外边框*/
+    }
+    form>button{
+      background-color: rgba(0,0,0,0);/*设置背景透明*/
+      border: 0;
+      color: #a9a8a8;
+      position: relative;
+      right: 40px;
+    }
+    .nav.navbar-nav>li>a:hover{
+      color: #ffc600;
+    }
+  </style>
+</head>
+<body>
+  <!--container为了居中-->
+  <header class="container">
+    <!--导航条开始-->
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">
+            <img alt="Brand" src="../286.png">
+          </a>
+        </div>
+        <!--分类标签开始-->
+        <ul class="nav navbar-nav">
+          <li><a href="">首页</a></li>
+          <li><a href="">手绘</a></li>
+          <li><a href="">次时代</a></li>
+          <li><a href="">雕刻</a></li>
+          <li><a href="">室内设计</a></li>
+          <li><a href="">地图编辑</a></li>
+          <li>
+            <form action="">
+              <input type="text" placeholder="Search">
+              <button type="submit">
+                <i class="fa fa-search"></i>
+              </button>
+            </form>
+          </li>
+        </ul>
+        <!--分类标签结束-->
+        <!--右侧列表开始-->
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="" class="fa fa-user-circle-o">管理员入口</a></li>
+        </ul>
+        <!--右侧列表结束-->
+      </div>
+    </nav>
+    <!--导航条结束-->
+  </header>
+
+  <section></section>
+  <footer></footer>
+</body>
+<script type="text/javascript" src="../bootstrap3/jquery.min.js"></script>
+<script type="text/javascript" src="../bootstrap3/js/bootstrap.js"></script>
+<script type="text/javascript" src="../bootstrap3/js/holder.js"></script>
+<script type="text/javascript" src="../bootstrap3/js/html5shiv.min.js"></script>
+<script type="text/javascript" src="../bootstrap3/js/css3-mediaqueries.js"></script>
+<script type="text/javascript" src="../bootstrap3/js/respond.min.js"></script>
+</html>
